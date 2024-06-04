@@ -34,6 +34,10 @@
                             :key="key">
                             high
                     </option>
+                    <option value="medium"
+                            :key="key">
+                            medium
+                    </option>
                     <option value=""
                             :key="key">
                             No filter
