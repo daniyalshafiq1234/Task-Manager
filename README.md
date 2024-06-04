@@ -21,7 +21,11 @@ npm install
 ```sh
 npm run dev
 ```
-
+### Setting up JSOn server
+Run this command in another terminal:
+```sh
+npm run dev
+```
 ### Compile and Minify for Production
 
 ```sh
