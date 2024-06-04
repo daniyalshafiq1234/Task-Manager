@@ -21,7 +21,11 @@ npm install
 ```sh
 npm run dev
 ```
-
+### Setting up JSON server
+Run this command in another terminal:
+```sh
+npx json-server db
+```
 ### Compile and Minify for Production
 
 ```sh
