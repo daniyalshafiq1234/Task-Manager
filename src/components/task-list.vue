@@ -43,8 +43,8 @@
             <tr>
                 <td>Tasks</td>
                 <td>Description</td>
-                <td>Creation date</td>
                 <td>Priotity</td>
+                <td>Creation date</td>
             </tr>
             <tr v-for="(task, index) in loggedInUserTasks">
                 <td>{{ task.title }}</td>
