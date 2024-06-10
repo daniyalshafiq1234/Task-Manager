@@ -44,10 +44,12 @@
                 <td>Tasks</td>
                 <td>Description</td>
                 <td>Creation date</td>
+                <td>Priotity</td>
             </tr>
             <tr v-for="(task, index) in loggedInUserTasks">
                 <td>{{ task.title }}</td>
                 <td>{{ task.description }}</td>
+                <td>{{ task.priority }}</td>
                 <td>{{ task.created_at }}</td>
                 <td><button class="btn" @click="deleteTask(task.id)">Delete</button></td>
                 <td><button class="btn" @click="editTaskDialog({id: task.id, 
@@ -412,6 +414,8 @@ body {
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    left: 505px;
+    top: 70px;
 }
 
 .dialog-buttons {
