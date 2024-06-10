@@ -74,7 +74,7 @@ export default {
 
     methods:{
         formSubmission(){
-            let ID = Math.random()
+            let ID = `${this.$store.getters.users.length + 1}`
             this.submitForm({id: ID, first_name: this.first_name, last_name: this.last_name, email: this.email});
             this.signup = false
             this.options = true
