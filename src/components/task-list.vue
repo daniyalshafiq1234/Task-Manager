@@ -207,7 +207,7 @@ export default{
                 description: this.description,
                 priority: this.priority,
                 assignee: this.assignee,
-                created_at: new Date(this.date)
+                created_at: this.date
             }
 
             this.newTask(task);
