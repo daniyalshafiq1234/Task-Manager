@@ -17,7 +17,7 @@
                     </option>
                 </select>
             </div>
-            <div v-show="!assigneeFilter" class="filter-group">
+            <div class="filter-group">
                 <h5>Filter list by priority:</h5>
                 <select v-model="priorityFilter" class="select-field">
                     <option value="low"
@@ -143,12 +143,23 @@ export default{
             this.tasks = [...this.$store.getters.tasks]
 
             let userTasks = []
+
             if(this.assigneeFilter){
                 let loggedInUser = this.users.find((user)=>{
                     if(user.id == this.assigneeFilter){
                         return user
                     }
                 });
+
+                if(this.priorityFilter != ''){
+                    userTasks = this.tasks.filter((task)=>{
+                            if(loggedInUser && (loggedInUser.id == task.assignee) && task.priority.includes(this.priorityFilter)){
+                                return task
+                            }
+                        })
+                        
+                    return userTasks;
+                }
 
                 userTasks = this.tasks.filter((task)=>{
                     if(loggedInUser && (loggedInUser.id == task.assignee)){
