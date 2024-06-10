@@ -202,7 +202,7 @@ export default{
     methods: {
         addNewTask(){
             let task = {
-                id: ""+ this.tasks.length + 2,
+                id: `${this.tasks.length + 2}`,
                 title: this.title,
                 description: this.description,
                 priority: this.priority,
